@@ -1,756 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Prachi Pandey | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-
-body{
-
-background:#020617;
-color:white;
-overflow-x:hidden;
-
-}
-
-
-/* Background Glow */
-
-body::before{
-
-content:"";
-position:fixed;
-width:100%;
-height:100%;
-
-background:
-radial-gradient(circle at top left,#2563eb55,transparent 35%),
-radial-gradient(circle at bottom right,#9333ea55,transparent 35%);
-
-z-index:-1;
-
-}
-
-
-/* Header */
-
-header{
-
-min-height:100vh;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-text-align:center;
-
-padding:40px;
-
-}
-
-
-header h1{
-
-font-size:55px;
-
-background:linear-gradient(90deg,#60a5fa,#c084fc);
-
--webkit-background-clip:text;
-color:transparent;
-
-}
-
-
-header h2{
-
-margin-top:15px;
-
-color:#cbd5e1;
-
-font-weight:400;
-
-}
-
-
-header p{
-
-max-width:700px;
-
-margin-top:25px;
-
-color:#94a3b8;
-
-font-size:18px;
-
-}
-
-
-/* Sections */
-
-section{
-
-max-width:1100px;
-
-margin:40px auto;
-
-padding:35px;
-
-background:rgba(255,255,255,.06);
-
-border:1px solid rgba(255,255,255,.1);
-
-border-radius:25px;
-
-backdrop-filter:blur(15px);
-
-box-shadow:0 20px 50px #0005;
-
-transition:.4s;
-
-}
-
-
-section:hover{
-
-transform:translateY(-5px);
-
-}
-
-
-
-h2{
-
-font-size:32px;
-
-margin-bottom:30px;
-
-color:#60a5fa;
-
-}
-
-
-
-ul{
-
-margin-left:20px;
-
-}
-
-
-li{
-
-margin:12px 0;
-
-color:#dbeafe;
-
-}
-
-
-/* Grid */
-
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-
-gap:25px;
-
-}
-
-
-
-.card{
-
-background:rgba(255,255,255,.08);
-
-padding:25px;
-
-border-radius:20px;
-
-border:1px solid rgba(255,255,255,.1);
-
-transition:.4s;
-
-}
-
-
-
-.card:hover{
-
-background:#2563eb;
-
-transform:translateY(-10px);
-
-box-shadow:0 20px 40px #2563eb55;
-
-}
-
-
-.card h3{
-
-margin-bottom:15px;
-
-color:#fff;
-
-}
-
-
-
-/* Project */
-
-
-.project{
-
-background:linear-gradient(135deg,#2563eb,#7c3aed);
-
-padding:30px;
-
-border-radius:25px;
-
-}
-
-
-
-.project h3{
-
-font-size:28px;
-
-margin-bottom:15px;
-
-}
-
-
-.project p{
-
-color:#e2e8f0;
-
-}
-
-
-
-.btn{
-
-display:inline-block;
-
-margin-top:20px;
-
-padding:12px 30px;
-
-border-radius:30px;
-
-background:white;
-
-color:#2563eb;
-
-font-weight:600;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-
-.btn:hover{
-
-transform:scale(1.1);
-
-}
-
-
-
-/* Links */
-
-
-a{
-
-color:#38bdf8;
-
-text-decoration:none;
-
-}
-
-
-a:hover{
-
-color:#c084fc;
-
-}
-
-
-
-/* Stats */
-
-.stats{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:25px;
-
-}
-
-
-.stats img{
-
-width:100%;
-
-border-radius:20px;
-
-}
-
-
-
-/* Contact */
-
-.contact{
-
-display:flex;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-
-.contact a{
-
-width:60px;
-
-height:60px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-border-radius:50%;
-
-background:#2563eb;
-
-color:white;
-
-font-size:25px;
-
-transition:.4s;
-
-}
-
-
-.contact a:hover{
-
-background:#9333ea;
-
-transform:translateY(-8px);
-
-}
-
-
-
-/* Quote */
-
-
-blockquote{
-
-padding:25px;
-
-border-left:5px solid #38bdf8;
-
-font-size:22px;
-
-color:#cbd5e1;
-
-font-style:italic;
-
-}
-
-
-
-/* Footer */
-
-
-footer{
-
-text-align:center;
-
-padding:50px;
-
-color:#94a3b8;
-
-}
-
-
-
-/* Responsive */
-
-
-@media(max-width:700px){
-
-header h1{
-
-font-size:35px;
-
-}
-
-
-section{
-
-margin:20px;
-
-padding:25px;
-
-}
-
-
-h2{
-
-font-size:26px;
-
-}
-
-}
-
-
-</style>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prachi Pandey | Software Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #161b22;
+            border-bottom: 1px solid #30363d;
+        }
+
+        header h1 {
+            font-size: 42px;
+            color: #58a6ff;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 20px;
+            color: #8b949e;
+            font-weight: normal;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        section {
+            margin-bottom: 45px;
+        }
+
+        h2 {
+            color: #58a6ff;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #f0f6fc;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            color: #c9d1d9;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #21262d;
+            color: #58a6ff;
+            padding: 8px 14px;
+            margin: 5px;
+            border-radius: 20px;
+            border: 1px solid #30363d;
+        }
+
+        .project {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 25px;
+        }
+
+        .project a,
+        .profiles a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        .project a:hover,
+        .profiles a:hover {
+            text-decoration: underline;
+        }
+
+        .profiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .profile-link {
+            background: #21262d;
+            padding: 12px 18px;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+        }
+
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .stats img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .motto {
+            text-align: center;
+            font-size: 22px;
+            color: #58a6ff;
+            padding: 25px;
+            background: #161b22;
+            border-radius: 10px;
+            border: 1px solid #30363d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #161b22;
+            border-top: 1px solid #30363d;
+            color: #8b949e;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            header h2 {
+                font-size: 16px;
+            }
+
+            .container {
+                width: 92%;
+            }
+        }
+    </style>
 </head>
-
 
 <body>
 
-
-<header>
-
-<h1>
-👋 Hi, I'm Prachi Pandey
-</h1>
-
-
-<h2>
-💻 Aspiring Software Developer | Problem Solver | Tech Enthusiast
-</h2>
-
-
-<p>
-
-Passionate about software development, problem solving,
-and building modern real-world applications with technology.
-
-</p>
-
-
-</header>
-
-
-
-
-<section>
-
-<h2>👩‍💻 About Me</h2>
-
-
-<ul>
-
-<li>🌱 Learning Data Structures & Algorithms</li>
-
-<li>💡 Interested in Full Stack Development</li>
-
-<li>🚀 Love building real-world projects</li>
-
-<li>🎯 Looking for Software Engineering opportunities</li>
-
-<li>📚 Continuous learner and technology enthusiast</li>
-
-
-</ul>
-
-</section>
-
-
-
-
-
-<section>
-
-<h2>🛠 Tech Stack</h2>
-
-
-<div class="grid">
-
-
-<div class="card">
-
-<h3>💻 Languages</h3>
-
-<p>
-C++<br>
-Java<br>
-Python<br>
-JavaScript
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🌐 Frontend</h3>
-
-<p>
-HTML5<br>
-CSS3<br>
-React.js
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>⚙ Backend</h3>
-
-<p>
-Node.js<br>
-Express.js
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🗄 Database</h3>
-
-<p>
-MongoDB<br>
-MySQL
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>🔧 Tools</h3>
-
-<p>
-Git<br>
-GitHub<br>
-VS Code
-</p>
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-
-<h2>🚀 Featured Project</h2>
-
-
-<div class="project">
-
-
-<h3>🛒 Amazon Clone Website</h3>
-
-
-<p>
-
-Responsive e-commerce website inspired by Amazon
-with attractive UI, product sections and modern layout.
-
-</p>
-
-
-<a class="btn" href="https://github.com/pandeyprachi0172/PrachiPandey">
-
-View Project
-
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-
-<h2>💻 Coding Profiles</h2>
-
-
-<ul>
-
-<li>
-🐙 GitHub :
-<a href="https://github.com/pandeyprachi0172">
-pandeyprachi0172
-</a>
-</li>
-
-
-<li>
-💻 LeetCode :
-<a href="https://leetcode.com/u/PrachiPandey7/">
-PrachiPandey7
-</a>
-</li>
-
-
-<li>
-⭐ CodeChef :
-<a href="https://www.codechef.com/users/prachi_1036">
-prachi_1036
-</a>
-</li>
-
-
-</ul>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-
-<h2>📊 GitHub Stats</h2>
-
-
-<div class="stats">
-
-
-<img src="https://github-readme-stats.vercel.app/api?username=pandeyprachi0172&show_icons=true&theme=tokyonight">
-
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pandeyprachi0172&layout=compact&theme=tokyonight">
-
-
-<img src="https://streak-stats.demolab.com?user=pandeyprachi0172&theme=tokyonight">
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-
-<h2>📫 Contact</h2>
-
-
-<div class="contact">
-
-
-<a href="mailto:pandeyprachi0172@gmail.com">
-✉
-</a>
-
-
-<a href="https://github.com/pandeyprachi0172">
-🐙
-</a>
-
-
-<a href="https://linkedin.com">
-in
-</a>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<section>
-
-<h2>✨ Motto</h2>
-
-
-<blockquote>
-
-Learn • Build • Share • Grow
-
-</blockquote>
-
-
-</section>
-
-
-
-
-
-
-<footer>
-
-<h3>
-⭐ Thanks for visiting my Portfolio!
-</h3>
-
-<p>
-Feel free to explore my repositories and connect with me.
-</p>
-
-
-</footer>
-
-
+    <!-- Header -->
+    <header>
+        <h1>Hi there, I'm Prachi Pandey 👋</h1>
+        <h2>💻 Aspiring Software Developer | Problem Solver | Tech Enthusiast</h2>
+    </header>
+
+    <main class="container">
+
+        <!-- About Me -->
+        <section>
+            <h2>👩‍💻 About Me</h2>
+
+            <ul>
+                <li>🌱 Currently learning <strong>Data Structures & Algorithms</strong> and <strong>Full-Stack Web Development</strong></li>
+                <li>💡 Interested in <strong>Software Development, Web Development, and Open Source</strong></li>
+                <li>🚀 Passionate about creating real-world projects</li>
+                <li>🎯 Looking for opportunities to enhance my skills as a Software Engineer</li>
+                <li>📚 Continuously learning and improving my coding abilities</li>
+            </ul>
+        </section>
+
+        <!-- Tech Stack -->
+        <section>
+            <h2>🛠️ Tech Stack</h2>
+
+            <div class="tech-grid">
+
+                <div class="card">
+                    <h3>👨‍💻 Programming Languages</h3>
+                    <div class="skills">
+                        <span>C++</span>
+                        <span>Java</span>
+                        <span>Python</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🌐 Frontend Development</h3>
+                    <div class="skills">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>React.js</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>⚙️ Backend Development</h3>
+                    <div class="skills">
+                        <span>Node.js</span>
+                        <span>Express.js</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🗄️ Database</h3>
+                    <div class="skills">
+                        <span>MongoDB</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🔧 Tools & Platforms</h3>
+                    <div class="skills">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>VS Code</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Featured Project -->
+        <section>
+            <h2>🚀 Featured Project</h2>
+
+            <div class="project">
+                <h3>🛒 Amazon Clone Webpage</h3>
+
+                <p>
+                    A responsive e-commerce website inspired by Amazon,
+                    designed to replicate the shopping experience with a
+                    clean and user-friendly interface.
+                </p>
+
+                <h3>Features</h3>
+
+                <ul>
+                    <li>✅ Amazon-like homepage layout</li>
+                    <li>✅ Navigation bar with search section</li>
+                    <li>✅ Product categories and product cards</li>
+                    <li>✅ Responsive design for different screen sizes</li>
+                    <li>✅ Shopping cart interface</li>
+                    <li>✅ Modern and attractive UI</li>
+                </ul>
+
+                <h3>Technologies Used</h3>
+
+                <p>
+                    HTML5 • CSS3 • JavaScript
+                </p>
+
+                <br>
+
+                <a href="https://github.com/pandeyprachi0172/PrachiPandey"
+                   target="_blank">
+                    🔗 View Project Repository
+                </a>
+            </div>
+        </section>
+
+        <!-- Coding Profiles -->
+        <section>
+            <h2>💻 Coding Profiles</h2>
+
+            <div class="profiles">
+
+                <div class="profile-link">
+                    🐙
+                    <a href="https://github.com/pandeyprachi0172"
+                       target="_blank">
+                        GitHub
+                    </a>
+                </div>
+
+                <div class="profile-link">
+                    💻
+                    <a href="https://leetcode.com/u/PrachiPandey7/"
+                       target="_blank">
+                        LeetCode
+                    </a>
+                </div>
+
+                <div class="profile-link">
+                    ⭐
+                    <a href="https://www.codechef.com/users/prachi_1036"
+                       target="_blank">
+                        CodeChef
+                    </a>
+                </div>
+
+                <div class="profile-link">
+                    💼
+                    <a href="https://linkedin.com/in/prachi-pandey-6a8518405/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GitHub Stats -->
+        <section>
+            <h2>📊 GitHub Stats</h2>
+
+            <div class="stats">
+
+                <img
+                    src="https://github-readme-stats.vercel.app/api?username=pandeyprachi0172&show_icons=true&theme=tokyonight&hide_border=true"
+                    alt="Prachi's GitHub Stats">
+
+                <img
+                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=pandeyprachi0172&layout=compact&theme=tokyonight&hide_border=true"
+                    alt="Top Languages">
+
+            </div>
+        </section>
+
+        <!-- GitHub Streak -->
+        <section>
+            <h2>🔥 GitHub Streak</h2>
+
+            <div class="stats">
+
+                <img
+                    src="https://streak-stats.demolab.com?user=pandeyprachi0172&theme=tokyonight&hide_border=true"
+                    alt="GitHub Streak">
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <h2>📫 Connect With Me</h2>
+
+            <p>
+                📧 Email:
+                <strong>pandeyprachi0172@gmail.com</strong>
+            </p>
+
+            <p>
+                💼 LinkedIn:
+                <a href="https://linkedin.com/in/prachi-pandey-6a8518405/"
+                   target="_blank">
+                    linkedin.com/in/prachi-pandey-6a8518405
+                </a>
+            </p>
+        </section>
+
+        <!-- Motto -->
+        <section>
+            <div class="motto">
+                ✨ "Learn • Build • Share • Grow"
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        ⭐ Thanks for visiting my profile!
+        <br>
+        Feel free to explore my repositories and connect with me.
+    </footer>
 
 </body>
-
 </html>

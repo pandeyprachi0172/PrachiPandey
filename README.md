@@ -1,4 +1,3 @@
-```markdown
 # Hi there, I'm Prachi Pandey 👋
 
 ### 💻 Aspiring Software Developer | Problem Solver | Tech Enthusiast
@@ -80,6 +79,9 @@ https://github.com/pandeyprachi0172/PrachiPandey
 - ⭐ **CodeChef:**  
   https://www.codechef.com/users/prachi_1036
 
+- 💼 **LinkedIn:**  
+  https://linkedin.com/in/prachi-pandey-6a8518405/
+
 ---
 
 ## 📊 GitHub Stats
@@ -100,6 +102,9 @@ https://github.com/pandeyprachi0172/PrachiPandey
 
 📧 Email: **pandeyprachi0172@gmail.com**
 
+💼 LinkedIn:  
+https://linkedin.com/in/prachi-pandey-6a8518405/
+
 ---
 
 ## ✨ Motto
@@ -107,4 +112,3 @@ https://github.com/pandeyprachi0172/PrachiPandey
 > "Learn • Build • Share • Grow"
 
 ⭐ Thanks for visiting my profile! Feel free to explore my repositories and connect with me.
-```
