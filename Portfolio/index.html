@@ -1,404 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prachi Pandey | Portfolio</title>
 
-    <title>Prachi Pandey | Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0d1117;
-            color: #c9d1d9;
-            line-height: 1.6;
-        }
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#0b1020;
+      color:#f5f7ff;
+      overflow-x:hidden;
+      line-height:1.7;
+    }
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: #161b22;
-            border-bottom: 1px solid #30363d;
-        }
+    body::before,
+    body::after{
+      content:'';
+      position:fixed;
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      filter:blur(100px);
+      opacity:.30;
+      z-index:-1;
+      animation:float 12s ease-in-out infinite;
+    }
 
-        header h1 {
-            font-size: 42px;
-            color: #58a6ff;
-            margin-bottom: 10px;
-        }
+    body::before{
+      top:-120px;
+      left:-120px;
+      background:#6c63ff;
+    }
 
-        header h2 {
-            font-size: 20px;
-            color: #8b949e;
-            font-weight: normal;
-        }
+    body::after{
+      bottom:-120px;
+      right:-120px;
+      background:#00d4ff;
+      animation-delay:4s;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 0;
-        }
+    @keyframes float{
+      0%,100%{transform:translate(0,0);}
+      50%{transform:translate(30px,20px);}
+    }
 
-        section {
-            margin-bottom: 45px;
-        }
+    .container{
+      width:min(1120px,92%);
+      margin:auto;
+    }
 
-        h2 {
-            color: #58a6ff;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #30363d;
-            padding-bottom: 10px;
-        }
+    section{
+      padding:90px 0;
+    }
 
-        h3 {
-            color: #f0f6fc;
-            margin: 20px 0 10px;
-        }
+    .section-title{
+      font-size:2.2rem;
+      text-align:center;
+      margin-bottom:36px;
+      background:linear-gradient(135deg,#ffffff,#a5b4fc,#67e8f9);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
 
-        p {
-            color: #c9d1d9;
-        }
+    /* HERO */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:40px 0;
+    }
 
-        ul {
-            padding-left: 25px;
-        }
+    .hero-card{
+      width:100%;
+      max-width:980px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:32px;
+      padding:52px 34px;
+      backdrop-filter:blur(18px);
+      box-shadow:0 25px 60px rgba(0,0,0,.45);
+    }
 
-        li {
-            margin: 8px 0;
-        }
+    .avatar{
+      width:140px;
+      height:140px;
+      margin:0 auto 24px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:3rem;
+      background:linear-gradient(135deg,#6c63ff,#00d4ff);
+      border:4px solid #0b1020;
+      box-shadow:0 0 25px rgba(0,212,255,.55);
+    }
 
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+    .badge{
+      display:inline-block;
+      padding:8px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      color:#dbeafe;
+      margin-bottom:16px;
+      font-size:.95rem;
+      font-weight:500;
+    }
 
-        .card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            padding: 20px;
-            transition: 0.3s;
-        }
+    h1{
+      font-size:clamp(2.6rem,6vw,5rem);
+      line-height:1.05;
+      margin-bottom:16px;
+      font-weight:800;
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #58a6ff;
-        }
+    .name{
+      background:linear-gradient(135deg,#ffffff,#a5b4fc,#67e8f9);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
 
-        .skills span {
-            display: inline-block;
-            background: #21262d;
-            color: #58a6ff;
-            padding: 8px 14px;
-            margin: 5px;
-            border-radius: 20px;
-            border: 1px solid #30363d;
-        }
+    .typing{
+      display:inline-block;
+      font-size:1.05rem;
+      font-weight:600;
+      color:#7dd3fc;
+      border-right:2px solid #7dd3fc;
+      white-space:nowrap;
+      overflow:hidden;
+      width:0;
+      animation:typing 6s steps(38,end) infinite, blink .7s step-end infinite;
+      margin-bottom:20px;
+    }
 
-        .project {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 10px;
-            padding: 25px;
-        }
+    @keyframes typing{
+      0%,10%{width:0;}
+      45%,55%{width:38ch;}
+      90%,100%{width:0;}
+    }
 
-        .project a,
-        .profiles a {
-            color: #58a6ff;
-            text-decoration: none;
-        }
+    @keyframes blink{
+      50%{border-color:transparent;}
+    }
 
-        .project a:hover,
-        .profiles a:hover {
-            text-decoration: underline;
-        }
+    .hero p{
+      max-width:700px;
+      margin:0 auto 30px;
+      color:#d7def5;
+      font-size:1.06rem;
+    }
 
-        .profiles {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+    .highlight{color:#67e8f9;font-weight:600;}
 
-        .profile-link {
-            background: #21262d;
-            padding: 12px 18px;
-            border-radius: 8px;
-            border: 1px solid #30363d;
-        }
+    /* ALL BUTTONS BLUE */
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:14px;
+      margin-bottom:30px;
+    }
 
-        .stats {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
+    .btn{
+      text-decoration:none;
+      color:white;
+      padding:14px 24px;
+      border-radius:14px;
+      font-weight:600;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
 
-        .stats img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
+      background:linear-gradient(135deg,#2563eb,#06b6d4);
+      border:none;
 
-        .motto {
-            text-align: center;
-            font-size: 22px;
-            color: #58a6ff;
-            padding: 25px;
-            background: #161b22;
-            border-radius: 10px;
-            border: 1px solid #30363d;
-        }
+      transition:all .25s ease;
+      box-shadow:
+        0 0 10px rgba(37,99,235,.5),
+        0 0 20px rgba(6,182,212,.35);
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #161b22;
-            border-top: 1px solid #30363d;
-            color: #8b949e;
-        }
+    .btn:hover{
+      transform:translateY(-3px) scale(1.03);
+      box-shadow:
+        0 0 16px rgba(37,99,235,.75),
+        0 0 32px rgba(6,182,212,.55),
+        0 12px 28px rgba(37,99,235,.35);
+    }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 32px;
-            }
+    .btn:active{
+      background:linear-gradient(135deg,#1d4ed8,#0284c7);
+      transform:scale(0.94);
+      box-shadow:
+        0 0 18px rgba(37,99,235,.9),
+        0 0 36px rgba(6,182,212,.7);
+    }
 
-            header h2 {
-                font-size: 16px;
-            }
+    /* QUICK STATS */
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
 
-            .container {
-                width: 92%;
-            }
-        }
-    </style>
+    .stat{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:20px;
+      padding:22px 16px;
+      transition:.3s ease;
+    }
+
+    .stat:hover{
+      transform:translateY(-6px);
+      border-color:rgba(103,232,249,.55);
+    }
+
+    .stat h3{
+      font-size:2rem;
+      color:#67e8f9;
+      margin-bottom:4px;
+    }
+
+    .stat p{
+      color:#cbd5e1;
+      font-size:.95rem;
+    }
+
+    /* ABOUT */
+    .about-card{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:24px;
+      padding:32px;
+      backdrop-filter:blur(10px);
+    }
+
+    .about-card ul{
+      margin-top:18px;
+      padding-left:20px;
+    }
+
+    .about-card li{
+      margin:10px 0;
+      color:#dbe4ff;
+    }
+
+    /* SKILLS */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:22px;
+      padding:26px;
+      transition:.35s ease;
+      backdrop-filter:blur(10px);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#67e8f9;
+      box-shadow:0 18px 34px rgba(0,0,0,.28);
+    }
+
+    .card h3{
+      margin-bottom:16px;
+      color:#fff;
+      font-size:1.08rem;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .skills span{
+      padding:8px 14px;
+      border-radius:999px;
+      background:#121933;
+      border:1px solid rgba(255,255,255,.08);
+      color:#9ee7ff;
+      font-size:.92rem;
+    }
+
+    /* PROJECT */
+    .project{
+      background:linear-gradient(135deg,rgba(108,99,255,.18),rgba(0,212,255,.12));
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:28px;
+      padding:34px;
+    }
+
+    .project h3{
+      font-size:1.6rem;
+      margin-bottom:12px;
+    }
+
+    .project p{
+      color:#e7ecff;
+      margin-bottom:18px;
+    }
+
+    .project ul{
+      padding-left:20px;
+      margin-bottom:22px;
+    }
+
+    .project li{
+      margin:8px 0;
+    }
+
+    /* GITHUB STATS */
+    .stats-images{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .stats-images img{
+      width:100%;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:0 10px 30px rgba(0,0,0,.22);
+    }
+
+    /* CONTACT */
+    .contact-box{
+      max-width:720px;
+      margin:auto;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:24px;
+      padding:34px;
+      text-align:center;
+      backdrop-filter:blur(10px);
+    }
+
+    .contact-box p{
+      margin:12px 0;
+      color:#dbe4ff;
+      font-size:1.02rem;
+    }
+
+    .contact-box a{
+      color:#67e8f9;
+      text-decoration:none;
+    }
+
+    .contact-box a:hover{
+      text-decoration:underline;
+    }
+
+    /* MOTTO */
+    .motto{
+      text-align:center;
+      padding:32px;
+      border-radius:24px;
+      background:linear-gradient(135deg,rgba(108,99,255,.18),rgba(0,212,255,.12));
+      border:1px solid rgba(255,255,255,.12);
+      font-size:1.35rem;
+      font-weight:700;
+      color:#fff;
+    }
+
+    footer{
+      text-align:center;
+      padding:28px 20px 40px;
+      color:#94a3b8;
+      font-size:.95rem;
+    }
+
+    @media (max-width:768px){
+      section{padding:70px 0;}
+      .hero-card{padding:40px 22px;}
+      .stats{grid-template-columns:1fr;}
+      .btn{width:100%;}
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Hi there, I'm Prachi Pandey 👋</h1>
-        <h2>💻 Aspiring Software Developer | Problem Solver | Tech Enthusiast</h2>
-    </header>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-card">
 
-    <main class="container">
+        <div class="avatar">👩‍💻</div>
 
-        <!-- About Me -->
-        <section>
-            <h2>👩‍💻 About Me</h2>
+        <div class="badge">👋 Hello, I’m Prachi Pandey</div>
 
-            <ul>
-                <li>🌱 Currently learning <strong>Data Structures & Algorithms</strong> and <strong>Full-Stack Web Development</strong></li>
-                <li>💡 Interested in <strong>Software Development, Web Development, and Open Source</strong></li>
-                <li>🚀 Passionate about creating real-world projects</li>
-                <li>🎯 Looking for opportunities to enhance my skills as a Software Engineer</li>
-                <li>📚 Continuously learning and improving my coding abilities</li>
-            </ul>
-        </section>
+        <h1>Building the future, <span class="name">one project at a time</span></h1>
 
-        <!-- Tech Stack -->
-        <section>
-            <h2>🛠️ Tech Stack</h2>
+        <div class="typing">Aspiring Software Developer • Problem Solver • Tech Enthusiast</div>
 
-            <div class="tech-grid">
+        <p>
+          I’m a passionate <span class="highlight">Computer Science student</span>
+          exploring <span class="highlight">DSA, Full-Stack Web Development, and Open Source</span>.
+          I love transforming ideas into beautiful, functional, and impactful digital experiences.
+        </p>
 
-                <div class="card">
-                    <h3>👨‍💻 Programming Languages</h3>
-                    <div class="skills">
-                        <span>C++</span>
-                        <span>Java</span>
-                        <span>Python</span>
-                        <span>JavaScript</span>
-                    </div>
-                </div>
+        <div class="buttons">
+          <a class="btn" href="https://github.com/pandeyprachi0172" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/prachi-pandey-6a8518405/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+          <a class="btn" href="https://leetcode.com/u/PrachiPandey7/" target="_blank" rel="noopener noreferrer">💻 LeetCode</a>
+          <a class="btn" href="https://www.codechef.com/users/prachi_1036" target="_blank" rel="noopener noreferrer">⭐ CodeChef</a>
+        </div>
 
-                <div class="card">
-                    <h3>🌐 Frontend Development</h3>
-                    <div class="skills">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>React.js</span>
-                    </div>
-                </div>
+        <div class="stats">
+          <div class="stat">
+            <h3>2nd</h3>
+            <p>Year Student</p>
+          </div>
+          <div class="stat">
+            <h3>3+</h3>
+            <p>Tech Domains</p>
+          </div>
+          <div class="stat">
+            <h3>∞</h3>
+            <p>Learning Mindset</p>
+          </div>
+        </div>
 
-                <div class="card">
-                    <h3>⚙️ Backend Development</h3>
-                    <div class="skills">
-                        <span>Node.js</span>
-                        <span>Express.js</span>
-                    </div>
-                </div>
+      </div>
+    </div>
+  </section>
 
-                <div class="card">
-                    <h3>🗄️ Database</h3>
-                    <div class="skills">
-                        <span>MongoDB</span>
-                        <span>MySQL</span>
-                    </div>
-                </div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">👩‍💻 About Me</h2>
+      <div class="about-card">
+        <p>Welcome to my portfolio! I’m passionate about software development, solving programming challenges, and building projects that strengthen my technical skills.</p>
+        <ul>
+          <li>🌱 Currently learning <strong>Data Structures & Algorithms</strong> and <strong>Full-Stack Web Development</strong></li>
+          <li>💡 Interested in <strong>Software Development, Web Development, and Open Source</strong></li>
+          <li>🚀 Passionate about creating real-world projects</li>
+          <li>🎯 Preparing for opportunities in software engineering</li>
+          <li>📚 Continuously learning and improving every day</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-                <div class="card">
-                    <h3>🔧 Tools & Platforms</h3>
-                    <div class="skills">
-                        <span>Git</span>
-                        <span>GitHub</span>
-                        <span>VS Code</span>
-                    </div>
-                </div>
+  <!-- TECH STACK -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">🛠️ Tech Stack</h2>
 
-            </div>
-        </section>
+      <div class="grid">
 
-        <!-- Featured Project -->
-        <section>
-            <h2>🚀 Featured Project</h2>
+        <div class="card">
+          <h3>👨‍💻 Programming Languages</h3>
+          <div class="skills">
+            <span>C++</span>
+            <span>Java</span>
+            <span>Python</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
 
-            <div class="project">
-                <h3>🛒 Amazon Clone Webpage</h3>
+        <div class="card">
+          <h3>🌐 Frontend Development</h3>
+          <div class="skills">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>React.js</span>
+          </div>
+        </div>
 
-                <p>
-                    A responsive e-commerce website inspired by Amazon,
-                    designed to replicate the shopping experience with a
-                    clean and user-friendly interface.
-                </p>
+        <div class="card">
+          <h3>⚙️ Backend Development</h3>
+          <div class="skills">
+            <span>Node.js</span>
+            <span>Express.js</span>
+          </div>
+        </div>
 
-                <h3>Features</h3>
+        <div class="card">
+          <h3>🗄️ Database</h3>
+          <div class="skills">
+            <span>MongoDB</span>
+            <span>MySQL</span>
+          </div>
+        </div>
 
-                <ul>
-                    <li>✅ Amazon-like homepage layout</li>
-                    <li>✅ Navigation bar with search section</li>
-                    <li>✅ Product categories and product cards</li>
-                    <li>✅ Responsive design for different screen sizes</li>
-                    <li>✅ Shopping cart interface</li>
-                    <li>✅ Modern and attractive UI</li>
-                </ul>
+        <div class="card">
+          <h3>🔧 Tools & Platforms</h3>
+          <div class="skills">
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>VS Code</span>
+          </div>
+        </div>
 
-                <h3>Technologies Used</h3>
+      </div>
+    </div>
+  </section>
 
-                <p>
-                    HTML5 • CSS3 • JavaScript
-                </p>
+  <!-- PROJECT -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">🚀 Featured Project</h2>
 
-                <br>
+      <div class="project">
+        <h3>🛒 Amazon Clone Webpage</h3>
+        <p>A responsive e-commerce website inspired by Amazon, designed to replicate the shopping experience with a clean and modern interface.</p>
 
-                <a href="https://github.com/pandeyprachi0172/PrachiPandey"
-                   target="_blank">
-                    🔗 View Project Repository
-                </a>
-            </div>
-        </section>
+        <ul>
+          <li>✅ Amazon-like homepage layout</li>
+          <li>✅ Navigation bar with search section</li>
+          <li>✅ Product categories and product cards</li>
+          <li>✅ Responsive design for all screen sizes</li>
+          <li>✅ Shopping cart interface</li>
+          <li>✅ Attractive modern UI</li>
+        </ul>
 
-        <!-- Coding Profiles -->
-        <section>
-            <h2>💻 Coding Profiles</h2>
+        <p><strong>Technologies Used:</strong> HTML5 • CSS3 • JavaScript</p>
 
-            <div class="profiles">
+        <a class="btn" href="https://github.com/pandeyprachi0172/PrachiPandey" target="_blank" rel="noopener noreferrer">🔗 View Project Repository</a>
+      </div>
+    </div>
+  </section>
 
-                <div class="profile-link">
-                    🐙
-                    <a href="https://github.com/pandeyprachi0172"
-                       target="_blank">
-                        GitHub
-                    </a>
-                </div>
+  <!-- GITHUB STATS -->
+  <section id="stats">
+    <div class="container">
+      <h2 class="section-title">📊 GitHub Stats</h2>
 
-                <div class="profile-link">
-                    💻
-                    <a href="https://leetcode.com/u/PrachiPandey7/"
-                       target="_blank">
-                        LeetCode
-                    </a>
-                </div>
+      <div class="stats-images">
+        <img src="https://github-readme-stats.vercel.app/api?username=pandeyprachi0172&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats">
+        
 
-                <div class="profile-link">
-                    ⭐
-                    <a href="https://www.codechef.com/users/prachi_1036"
-                       target="_blank">
-                        CodeChef
-                    </a>
-                </div>
+        <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=pandeyprachi0172&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages">
+        
 
-                <div class="profile-link">
-                    💼
-                    <a href="https://linkedin.com/in/prachi-pandey-6a8518405/"
-                       target="_blank">
-                        LinkedIn
-                    </a>
-                </div>
+        <img src="https://streak-stats.demolab.com?user=pandeyprachi0172&theme=tokyonight&hide_border=true" alt="GitHub Streak">
+      </div>
+    </div>
+  </section>
 
-            </div>
-        </section>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">📫 Connect With Me</h2>
 
-        <!-- GitHub Stats -->
-        <section>
-            <h2>📊 GitHub Stats</h2>
+      <div class="contact-box">
+        <p>📧 Email: <strong>pandeyprachi0172@gmail.com</strong></p>
 
-            <div class="stats">
+        <p>💼 LinkedIn:
+          <a href="https://www.linkedin.com/in/prachi-pandey-6a8518405/" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/prachi-pandey-6a8518405
+          </a>
+        </p>
 
-                <img
-                    src="https://github-readme-stats.vercel.app/api?username=pandeyprachi0172&show_icons=true&theme=tokyonight&hide_border=true"
-                    alt="Prachi's GitHub Stats">
+        <p>🐙 GitHub:
+          <a href="https://github.com/pandeyprachi0172" target="_blank" rel="noopener noreferrer">
+            github.com/pandeyprachi0172
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
 
-                <img
-                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=pandeyprachi0172&layout=compact&theme=tokyonight&hide_border=true"
-                    alt="Top Languages">
+  <!-- MOTTO -->
+  <section>
+    <div class="container">
+      <div class="motto">
+        ✨ “Learn • Build • Share • Grow”
+      </div>
+    </div>
+  </section>
 
-            </div>
-        </section>
-
-        <!-- GitHub Streak -->
-        <section>
-            <h2>🔥 GitHub Streak</h2>
-
-            <div class="stats">
-
-                <img
-                    src="https://streak-stats.demolab.com?user=pandeyprachi0172&theme=tokyonight&hide_border=true"
-                    alt="GitHub Streak">
-
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section>
-            <h2>📫 Connect With Me</h2>
-
-            <p>
-                📧 Email:
-                <strong>pandeyprachi0172@gmail.com</strong>
-            </p>
-
-            <p>
-                💼 LinkedIn:
-                <a href="https://linkedin.com/in/prachi-pandey-6a8518405/"
-                   target="_blank">
-                    linkedin.com/in/prachi-pandey-6a8518405
-                </a>
-            </p>
-        </section>
-
-        <!-- Motto -->
-        <section>
-            <div class="motto">
-                ✨ "Learn • Build • Share • Grow"
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        ⭐ Thanks for visiting my profile!
-        <br>
-        Feel free to explore my repositories and connect with me.
-    </footer>
+  <footer>
+    ⭐ Thanks for visiting my portfolio! <br>
+    Feel free to explore my repositories and connect with me.
+  </footer>
 
 </body>
 </html>

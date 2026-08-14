@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomora | Focus. Study. Grow.</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <h1 class="logo">🍅 Pomora</h1>
+        <p>Focus. Study. Grow.</p>
+      </div>
+
+      <nav>
+        <a href="#" class="active">
+          <i class="fa-solid fa-clock"></i>
+          Timer
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-chart-line"></i>
+          Dashboard
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-list-check"></i>
+          Tasks
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-chart-pie"></i>
+          Analytics
+        </a>
+
+        <a href="#">
+          <i class="fa-solid fa-gear"></i>
+          Settings
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Top Bar -->
+      <header class="topbar">
+        <div>
+          <h2>Focus Session</h2>
+          <p>Stay consistent today 🚀</p>
+        </div>
+
+        <button id="themeToggle" title="Toggle Theme">
+          🌙
+        </button>
+      </header>
+
+      <!-- Timer Card -->
+      <section class="timer-card">
+
+        <div class="timer-tabs">
+          <button class="tab active">Pomodoro</button>
+          <button class="tab">Short Break</button>
+        </div>
+
+        <div class="circle">
+          <div class="inner-circle">
+            <h1 id="timer">25:00</h1>
+            <p id="sessionLabel">Focus Time 🎯</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="resetBtn">
+            <i class="fa-solid fa-rotate-left"></i>
+            Reset
+          </button>
+
+          <button id="pauseBtn">
+            <i class="fa-solid fa-pause"></i>
+            Pause
+          </button>
+
+          <button id="startBtn">
+            <i class="fa-solid fa-play"></i>
+            Start
+          </button>
+        </div>
+
+      </section>
+
+      <!-- Stats Cards -->
+      <section class="stats-grid">
+
+        <div class="stat">
+          <i class="fa-solid fa-bullseye"></i>
+          <h3>Sessions</h3>
+          <p id="goalCount">0</p>
+        </div>
+
+        <div class="stat">
+          <i class="fa-solid fa-clock"></i>
+          <h3>Focus Time</h3>
+          <p id="focusHours">0h</p>
+        </div>
+
+        <div class="stat">
+          <i class="fa-solid fa-fire"></i>
+          <h3>Streak</h3>
+          <p id="streakCount">0 days</p>
+        </div>
+
+      </section>
+
+      <!-- Daily Goal -->
+      <section class="tasks-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+          <h3>Daily Goal</h3>
+          <span>3 / 8 sessions</span>
+        </div>
+
+        <div style="background:#1f2937; height:10px; border-radius:999px; overflow:hidden;">
+          <div style="width:38%; height:100%; background:linear-gradient(90deg,#22c55e,#16a34a); border-radius:999px;"></div>
+        </div>
+      </section>
+
+      <!-- Tasks Section -->
+      <section class="tasks-card">
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
+          <h3>Today's Tasks</h3>
+          <button style="background:#ff6b6b; border:none; color:white; padding:8px 14px; border-radius:10px; cursor:pointer;">
+            + Add Task
+          </button>
+        </div>
+
+        <ul id="taskList">
+
+          <li>
+            <input type="checkbox" checked />
+            DSA Practice
+          </li>
+
+          <li>
+            <input type="checkbox" />
+            JavaScript Revision
+          </li>
+
+          <li>
+            <input type="checkbox" />
+            Build Pomora UI
+          </li>
+
+          <li>
+            <input type="checkbox" />
+            Read Operating System Notes
+          </li>
+
+        </ul>
+
+      </section>
+
+      <!-- Motivation Card -->
+      <section class="tasks-card">
+        <h3>Today's Motivation</h3>
+        <p style="color:#cbd5e1; line-height:1.7; margin-top:10px;">
+          “Discipline is choosing between what you want now and what you want most.”
+        </p>
+        <p style="margin-top:12px; color:#ff8e53; font-weight:600;">
+          — Abraham Lincoln
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
