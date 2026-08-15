@@ -88,7 +88,8 @@ https://github.com/pandeyprachi0172/PrachiPandey
 
 ![Prachi's GitHub Stats](https://github-readme-stats.vercel.app/api?username=pandeyprachi0172&show_icons=true&theme=tokyonight&hide_border=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=pandeyprachi0172&layout=compact&theme=tokyonight&hide_border=true)
+![Top Languages]  (https://github-readme-stats-fast.vercel.app/api/top-langs/?username=pandeyprachi0172&layout=compact&theme=tokyonight&hide_border=true" )
+
 
 ---
 
